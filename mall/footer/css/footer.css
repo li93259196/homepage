@@ -1,0 +1,134 @@
+/*底部导航栏*/
+.footer {
+    display: block;
+    height: 272px;
+}
+.footer-top {
+   display: block;
+   height: 25px;
+   padding: 27px 0;
+   border-bottom: 1px solid #e0e0e0;
+}
+.footer-top .footer-nav .nav-at {
+    float: left;
+    width: 19%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-right: 1px solid #e0e0e0;
+}
+.footer-top .footer-nav .nav-ate {
+    float: left;
+    width: 19%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+.footer-top .footer-nav a {
+    color: #333333;
+}
+.footer-top .footer-nav a:hover{
+    color: #ff6700;
+}
+/*底部链接*/
+.footer-btn {
+    display: block;
+    float: left;
+    width: 1226px;
+    padding: 40px 0;
+}
+.footer-btn .btn-col {
+    margin: 0;
+    float: left;
+    width: 14%;
+    text-align: left;
+}
+.footer-btn .btn-col dt {
+    padding-top: -1px;
+    padding-bottom: 26px;
+} 
+.footer-btn .btn-col dd {
+    margin: 0;
+    padding-top: 10px;
+    font-size: 13px;
+}
+.footer-btn .btn-col a {
+    color: #333333;
+}
+.footer-btn .btn-col a:hover {
+    color: #ff6700;
+}
+/*电话*/
+.footer-btn .btn-p {
+    float: left;
+    width: 14%;
+    text-align: center;
+    border-left: 1px solid #e0e0e0;
+}
+.footer-btn .btn-p .pa {
+    margin: 0;
+    font-size: 22px;
+    color: #ff6700;
+    padding-bottom: 5px;
+}
+.footer-btn .btn-p .pb {
+    margin: 0;
+    font-size: 12px;
+    padding-bottom: 16px;
+}
+.footer-btn .btn-p .pc {
+    margin-left: 24px;
+    width: 118px;
+    height: 28px;
+    border: 1px solid #ff6700;
+}
+.footer-btn .btn-p .pc a {
+    display: block;
+    font-size: 16px;
+    width: 118px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #ff6700;
+}
+.footer-btn .btn-p .pc a:hover {
+    background-color: #ff6700;
+    color: #ffffff;
+}
+/*底部信息*/
+.b-info {
+    height: 200px;
+    background: #e0e0e0;
+}
+.b-info .info-logo {
+    float: left;
+    width: 49px;
+    height: 49px;
+    line-height: 55px;
+    background: #ff6700;
+}
+.b-info .info-xx {
+    float: left;
+    font-size: 13px;
+    height: 20px;
+    padding-left: 12px;
+}
+.b-info .info-xx a {
+    color: #333333;
+}
+.b-info .info-xx a:hover {
+    color: #ff6700;
+}
+.b-info .info-xx span {
+    color: #b0b0b0;
+}
+.b-info .info-xx .xx-z {
+    color: #b0b0b0;
+}
+.b-info .info-xx .xx-z a {
+    color: #b0b0b0;
+}
+.b-info .info-xx .xx-z a:hover {
+    color: #ff6700;
+}
