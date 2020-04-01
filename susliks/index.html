@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>打地鼠</title>
+    <!--css-->
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+    <div class="scene" id="scene">
+        <div class="alertWin">
+            <div class="notice">
+                <h2>打地鼠小游戏</h2>
+                <h4>如何开始</h4>
+                <p>点击屏幕上的开始按钮即可开始游戏</p>
+                <h4>游戏目标</h4>
+                <p>合理操作，挑战高分</p>
+                <h4>游戏介绍</h4>
+                <p>鼠标左键每击中一只地鼠分数加1，一款打地鼠小游戏，小巧轻量，无聊的时候就来打地鼠吧。</p>
+                <button id="startBtn" class="btn start">开始</button>
+            </div>
+            <div class="result">
+
+                <div class="resultBlock">
+                    <h2>打地鼠小游戏</h2>
+                    <p class="resultNotice">游戏结束。</p>
+                    <div class="allstar"></div>
+                    <div class="rule">?</div>
+                    <button id="restartBtn" class="btn restart">再来一局</button>
+                    <button id="refreshBtn" class="btn refresh">返回主页</button>
+                </div>
+                <div class="starBlock">
+                    <button class="btn backTo">返回</button>
+                    <p>积分规则</p>
+                    <div class="content">
+                        <img src="./images/ic_rating_s@2x.png" alt="星星积分规则">
+                        <div class="startToScore tenth">>9</div>
+                        <div class="startToScore ninth">9</div>
+                        <div class="startToScore eighth">8</div>
+                        <div class="startToScore seventh">7</div>
+                        <div class="startToScore sixth">6</div>
+                        <div class="startToScore fifth">5</div>
+                        <div class="startToScore fourth">4</div>
+                        <div class="startToScore third">3</div>
+                        <div class="startToScore twice">2</div>
+                        <div class="startToScore first">1</div>
+                        <div class="startToScore zero">0</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <img id="bg" src="./images/bg.png" alt="">
+        <div class="scorebox">
+            <span id="score">0</span>
+        </div>
+        <div id="lefttimebox">
+            <span><i id="lefttime">30</i><span>&nbsp;&nbsp;s</span></span>
+        </div>
+        <img id="hammer1" src="./images/hammer1.png" alt="">
+        <div id="hollow1">
+            <img id="mouse1" src="./images/mouse1.png" alt="">
+        </div>
+        <div id="hollow2">
+            <img id="mouse2" src="./images/mouse1.png" alt="">
+        </div>
+        <div id="hollow3">
+            <img id="mouse3" src="./images/mouse1.png" alt="">
+        </div>
+        <div id="hollow4">
+            <img id="mouse4" src="./images/mouse1.png" alt="">
+        </div>
+        <div id="hollow5">
+            <img id="mouse5" src="./images/mouse1.png" alt="">
+        </div>
+        <div id="hollow6">
+            <img id="mouse6" src="./images/mouse1.png" alt="">
+        </div>
+        <div id="hollow7">
+            <img id="mouse7" src="./images/mouse1.png" alt="">
+        </div>
+        <div id="hollow8">
+            <img id="mouse8" src="./images/mouse1.png" alt="">
+        </div>
+        <div id="hollow9">
+            <img id="mouse9" src="./images/mouse1.png" alt="">
+        </div>
+    </div>
+    <script src="SceneManager.js"></script>
+    <script src="Score.js"></script>
+    <script src="Hammer.js"></script>
+    <script src="Mouse.js"></script>
+    <script>
+        var game = {};
+        game.SM = new SceneManager();
+        game.updateTime = 10;
+        game.timer = setInterval(function () {
+            game.SM.update();
+            game.SM.render();
+        }, game.updateTime);
+    </script>
+</body>
+
+</html>

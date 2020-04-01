@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>打字小游戏</title>
+    <link rel="stylesheet" href="./animate.css">
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, #444 0%,#000 50%);
+        }
+        #char{
+            font-size: 400px;
+            color: lightgreen;
+        }
+        #result{
+            color: #888;
+            bottom: 100px;
+        }
+        #char.err{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id = "char" class="a">A</div>
+    <div id = "result">请按照我们屏幕上的字母按下相应的按键</div>
+    <script>
+        //获取dom节点 
+        var charDom = document.getElementById("char");
+        var result = document.getElementById("result");
+        //存储每一次要验证的字母
+        var char;
+        //计数变量 正确的计数和错误的计数
+        var correctCount = 0;
+        var errCount = 0;
+        //随机一个字母函数 把字母报错到char变量当中 把字母渲染到dom上
+        function changeChar(){
+            var random  = Math.random();
+            var code = Math.floor(random * 26 + 65);
+            char = String.fromCharCode(code);
+            charDom.innerText = char;
+        }
+        //初始化执行函数 随机一个字母
+        changeChar();
+        //绑定鼠标按下事件
+        document.addEventListener("keydown",function(event){
+            //通过event.code判断敲击的按键 并跟验证的字母比较
+            if(event.code.slice(3,4) === char) {
+                //成功的话 重新换一个字母 成功计数器加一
+                changeChar();
+                correctCount++;
+                charDom.className = "animated zoomIn";
+            }else{
+                //失败的话 失败计数器加一 并让字母变红抖动
+                errCount++;
+                charDom.className = "animated shake err";
+            }
+            //计算正确率 并渲染到result的
+            var percent = (100 * correctCount / (correctCount + errCount)).toFixed(2);
+            result.innerText = "正确个数"+ correctCount + "个 错误个数 " + errCount + "个 正确率为" + percent + "%";
+            //过500毫秒让字母变成正常颜色
+            setTimeout(function(){
+                charDom.className = ""
+            }, 500);
+        })
+    </script>
+</body>
+</html>

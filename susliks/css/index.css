@@ -1,0 +1,297 @@
+h4{
+    margin:0;
+}
+.scene{
+    position: relative;
+    width:750px;
+    height:550px;
+    user-select: none;/*无法选中图片*/
+}
+#hammer1{
+    display: none;
+    position: absolute;
+    /* 鼠标正对hammer的中心点 */
+    margin-left:-40px;
+    margin-top:-40px;
+    left:50%;
+    top:50%;
+    cursor: none;/*隐藏箭头*/
+    user-select: none;/*无法选中图片*/
+    z-index: 999;
+}
+div[id^="hollow"]{ 
+    position: absolute;
+    
+    width:102px;
+    height:103px;
+    overflow: hidden;
+}
+#hollow1{
+    top:160px;
+    left:140px;
+}
+
+#hollow2{
+    top:160px;
+    left:330px;
+}
+#hollow3{
+    top:160px;
+    left:528px;
+}
+#hollow4{
+    top:248px;
+    left:117px;
+}
+#hollow5{
+    top:248px;
+    left:334px;
+}
+#hollow6{
+    top:248px;
+    left:532px;
+}
+#hollow7{
+    top:340px;
+    left:109px;
+}
+#hollow8{
+    top:344px;
+    left:334px;
+}
+#hollow9{
+    top:350px;
+    left:551px;
+}
+
+img[id^="mouse"]{
+    /* border:1px solid red; */
+    position: absolute;  
+    top:104px;
+}
+.scorebox{
+    position: absolute;
+    width:110px;
+    height:20px;
+    left:230px;
+    top:195px;
+    /* border:1px solid red; */
+    text-align: center;
+}
+.scorebox span{
+    font-size: 18px;
+    line-height: 20px;
+    color:rgba(0,0,0,0.8);
+}
+#lefttimebox{
+    position: absolute;
+    width:110px;
+    height:20px;
+    left:484px;
+    top:195px;
+    background-color: #fff;
+    text-align: center;
+} 
+#lefttimebox i{
+    font-style: normal;
+}
+#lefttimebox span{
+    font-size: 16px;
+    line-height: 20px;
+    color:rgba(0,0,0,0.8);
+}
+#btn{
+    width:110px;
+    height:20px;
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    border:none;
+}
+.alertWin{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left:-200px;
+    margin-top:-175px;
+    width:400px;
+    height: 350px;
+    padding: 10px 20px;
+    border:5px solid darkgreen;
+    border-radius: 40px;
+    background-color: rgb(194, 247, 194);
+    opacity: 0.9;
+    z-index: 10;
+    overflow: hidden;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
+    color:#444;
+    box-sizing: border-box;
+}
+.resultBlock{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s linear;
+
+}
+.notice{
+    display: block;
+}
+
+
+.result{
+    display: none;
+}
+.btn{
+    position: absolute;
+   
+    width: 80px;
+    height: 35px;
+    
+    background-color: darkgreen;
+    color:#fff;
+    border:1px solid darkgreen;
+    border-radius: 10px;
+    box-shadow: 2px 1px 3px rgba(0,0,0,0.2);
+    cursor: pointer;
+    
+    outline: none;
+    transition: all 0.2s linear;
+}
+.resultNotice span{
+    font-size: 32px;
+    color: red;
+}
+.btn:hover{
+    transform:  translateX(50%) scale(1.1);
+}
+.start{
+    top: 84%;
+    right: 50%;
+    transform: translateX(50%);
+}
+.restart{
+    bottom: 30%;
+    left: 10%;
+    transform: translateX(50%);
+}
+.refresh{
+    bottom:  30%;
+    right: 30%;
+    transform: translateX(50%);
+}
+.alertWin h2{
+    text-align: center;
+    color: #333;
+}
+.alertWin p{
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555;
+}
+.alertWin .allstar{
+    margin:20px auto;
+    background-image: url("./images/ic_rating_s@2x.png");
+    background-position-y: 0;
+    width:110px;
+    height: 22px;
+}
+.rule{
+    position: absolute;
+    top: 158px;
+    right: 112px;
+    color: rgba(0,0,0,0.5);
+    border-radius: 14px;
+    border:1px solid rgba(0,0,0,0.5);
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    line-height: 14px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.rule:hover {
+    background-color: rgba(0,0,0,0.5);
+    color:#fff;
+}
+.starBlock{
+    position: absolute;
+    left: 395px;
+    width:400px;
+    height: 350px;
+    top: 0;
+    transition: all 0.3s linear;
+}
+.starBlock  p{
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-weight: 200;
+    font-size: 18px;
+}
+.starBlock .backTo{
+    position: absolute;
+    transform: scale(0.9);
+    top: 10px;
+    left: 14px;
+}
+.backTo:hover{
+    transform:  scale(1);
+
+
+}
+.starBlock .content{
+    position: relative;
+    width:250px;
+    /* height: 300px; */
+    padding: 22px;
+    padding-left: 0;
+    margin:20px auto;
+    margin-top: 0;
+    /* border-radius: 22px; */
+    /* border: 2px solid rgba(0,0,0,0.2); */
+}
+.startToScore{
+    position: absolute;
+    right: 40px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    color:rgba(0,0,0,0.5);
+    font-size: 13px;
+}
+.tenth{
+    top: 22px;
+}
+.ninth{
+    top: 44px;
+}
+.eighth{
+    top: 66px;
+}
+.seventh{
+    top: 88px;
+}
+.sixth{
+    top: 110px;
+}
+.fifth{
+    top: 132px;
+}
+.fourth{
+    top: 154px;
+}
+.third{
+    top: 176px;
+}
+.twice{
+    top: 198px;
+}
+.first{
+    top: 220px;
+}
+.zero{
+    top: 242px;
+}
